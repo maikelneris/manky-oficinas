@@ -30,7 +30,7 @@
         </router-link>
       </li>
       <li>
-        <a href="#">
+        <a href="#" @click="logout">
           <b-icon icon="box-arrow-left"></b-icon>
           <span class="d-md-inline-block d-none">Sair</span>
         </a>
@@ -38,6 +38,17 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout(evt) {
+      evt.preventDefault();
+      this.$emit("performLogout");
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 #sidebar {

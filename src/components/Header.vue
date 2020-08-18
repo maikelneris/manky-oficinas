@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 header {
   padding: 20px 20px 120px 20px;
-  background: rgb(2, 0, 36);
+  background: var(--secondary);
   background: linear-gradient(140deg, var(--primary) 0%, var(--secondary) 100%);
   margin-bottom: -50px;
 

@@ -1,6 +1,6 @@
 <template>
   <div id="auth-view">
-    <Sidebar />
+    <Sidebar @performLogout="performLogin()" />
     <div id="dashboard">
       <router-view></router-view>
     </div>
@@ -13,6 +13,11 @@ import Sidebar from "./Sidebar";
 export default {
   components: {
     Sidebar,
+  },
+  methods: {
+    performLogin() {
+      this.$emit("performLogin", "Login");
+    },
   },
 };
 </script>
