@@ -12,10 +12,10 @@
         </router-link>
       </li>
       <li>
-        <a href="#">
+        <router-link to="/orders" active-class="active">
           <b-icon icon="basket"></b-icon>
           <span class="d-md-inline-block d-none">Pedidos</span>
-        </a>
+        </router-link>
       </li>
       <li>
         <router-link to="/reports" active-class="active">
