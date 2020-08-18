@@ -1,4 +1,13 @@
+$primary: #ed6a5e;
+$secondary: #ffaf87;
+
+:root {
+  --primary: #ed6a5e;
+  --secondary: #ffaf87;
+  --tertiary: #377771;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap-vue/src/index.scss";
-@import "./responsive.scss";
 @import "./custom.scss";
+@import "./responsive.scss";
