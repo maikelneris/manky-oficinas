@@ -32,16 +32,12 @@ export default {
         email: "",
         name: "",
       },
-      login: "",
     };
   },
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      //alert(JSON.stringify(this.form));
-      this.login = "Auth";
-      //alert(this.login);
-      this.$emit("performLogin", this.login);
+      this.$emit("performLogin", true);
     },
   },
 };

@@ -1,8 +1,10 @@
 <template>
   <div id="auth-view">
-    <Sidebar @performLogout="performLogin()" />
+    <Sidebar @performLogout="performLogin($event)" />
     <div id="dashboard">
-      <router-view></router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -15,8 +17,9 @@ export default {
     Sidebar,
   },
   methods: {
-    performLogin() {
-      this.$emit("performLogin", "Login");
+    performLogin(event) {
+      this.$emit("performLogin", event);
+      //console.log(event);
     },
   },
 };

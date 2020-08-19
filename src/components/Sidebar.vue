@@ -44,7 +44,9 @@ export default {
   methods: {
     logout(evt) {
       evt.preventDefault();
-      this.$emit("performLogout");
+      if (confirm("Tem certeza de que deseja sair?")) {
+        this.$emit("performLogout", false);
+      }
     },
   },
 };

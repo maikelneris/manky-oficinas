@@ -1,6 +1,6 @@
 <template>
   <div>
-    <component :is="selectedView" @performLogin="selectedView = $event"></component>
+    <component :is="selectedView" @performLogin="performLogin($event)"></component>
   </div>
 </template>
 
@@ -11,10 +11,28 @@ import Login from "./pages/Login";
 export default {
   data: function () {
     return {
-      selectedView: "Login",
+      selectedView: localStorage.login,
     };
   },
   components: { Auth, Login },
+  methods: {
+    performLogin(event) {
+      if (event) {
+        localStorage.login = "Auth";
+        this.selectedView = "Auth";
+      } else {
+        localStorage.login = "Login";
+        this.selectedView = "Login";
+      }
+    },
+  },
+  mounted() {
+    console.log(localStorage.login);
+    console.log(this.selectedView);
+  },
+  beforeCreate() {
+    if (!localStorage.login) localStorage.login = "Login";
+  },
 };
 </script>
 
