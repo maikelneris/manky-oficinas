@@ -4,8 +4,6 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
 import "./styles/main.scss";
 import { routes } from "./routes";
-import Auth from "./components/Auth";
-import Login from "./pages/Login";
 import App from "./App";
 
 Vue.use(VueRouter);
