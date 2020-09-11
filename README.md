@@ -2,6 +2,9 @@
 
 > Modulo de Oficinas do Manky
 
+Demo: https://manky.netlify.app/
+(Use any valid email and type anything on password)
+
 ## Build Setup
 
 ``` bash
