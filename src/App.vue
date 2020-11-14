@@ -28,7 +28,6 @@ export default {
   },
   mounted() {
     console.log(localStorage.login);
-    console.log(this.selectedView);
   },
   beforeCreate() {
     if (!localStorage.login) localStorage.login = "Login";

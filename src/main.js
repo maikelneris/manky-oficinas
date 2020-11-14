@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
-const router = new VueRouter({ routes, mode: "history" });
+const router = new VueRouter({ routes, base: process.env.ROUTER_BASE });
 
 new Vue({
   el: "#app",

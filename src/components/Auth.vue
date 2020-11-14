@@ -19,7 +19,6 @@ export default {
   methods: {
     performLogin(event) {
       this.$emit("performLogin", event);
-      //console.log(event);
     },
   },
 };
